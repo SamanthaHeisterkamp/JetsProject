@@ -8,11 +8,12 @@ public abstract class Broom {
 	private int broomRange = 0;
 	private long broomPrice = 0;
 	
+	
 	public Broom () {
 		super();
 	}
 	public Broom(String broomName, double broomSpeed, int broomRange, long broomPrice) {
-//		super();
+		super();
 		this.broomName = broomName;
 		this.broomPrice = broomPrice;
 		this.broomRange = broomRange;
