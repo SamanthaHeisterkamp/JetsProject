@@ -10,8 +10,14 @@ public class Cargo extends Broom implements CargoCarrier{
 	 
  }
  public void loadCargo() {
-	 System.out.println("Loading school Trunk.");
-	 System.out.println("Trunk secure, flying to Hogwarts!");
+	 if (broomType.equals("Cargo"))
+		 System.out.println(toString());
+	 System.out.println(" ");
+	 System.out.println("**~*~*~*Loading school Trunk.*~*~*~**");
+	 System.out.println("*~Trunk secure, flying to Hogwarts!~*");
+	 System.out.println(" ");
  }
+
+ 
 }
 

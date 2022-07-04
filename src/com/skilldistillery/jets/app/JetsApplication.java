@@ -55,9 +55,9 @@ public class JetsApplication {
 				case 7:
 					broomCloset.geminioABroomToTheSweep(sc);
 					break;
-//				case 8:
-//					broomCloset.EvanescoABroomFromTheSweep();
-//					break;
+				case 8:
+					broomCloset.evanescoABroomFromTheSweep(sc);
+					break;
 				case 9:
 					System.out.println("Mischief Managed.");
 					loop = false;

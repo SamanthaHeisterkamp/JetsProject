@@ -54,6 +54,7 @@ public class BroomCloset {
 	public void listSweepOfBrooms() { // case 1
 		for (Broom broom : sweep) {
 			System.out.println(broom.toString());
+			System.out.println("----------------------------------------------------------------");
 		}
 	}
 
@@ -77,6 +78,7 @@ public class BroomCloset {
 		}
 		if (accioFastestBroom != null) {
 			System.out.println("The fastest Broom in the Sweep is: \n" + accioFastestBroom);
+			System.out.println("----------------------------------------------------------------");
 		}
 	}
 
@@ -92,6 +94,7 @@ public class BroomCloset {
 		}
 		if (longRange != null) {
 			System.out.println("The broom with the longest range is: \n" + longRange);
+			System.out.println("---------------------------------------------------------------");
 		}
 	}
 
@@ -112,8 +115,8 @@ public class BroomCloset {
 		}
 			
 		}
-		public void geminioABroomToTheSweep(Scanner sc) {
-			String Tanker = null;
+		public void geminioABroomToTheSweep(Scanner sc) { //case 7
+			String type = "Tanker";
 			String newName;
 			double newSpeed;
 			int newRange;
@@ -128,10 +131,21 @@ public class BroomCloset {
 			System.out.println("How many galleons does your broom cost?");
 			newPrice = sc.nextLong();
 			
-			Tanker newBroom = new Tanker(Tanker, newName, newSpeed, newRange, newPrice);
+			BroomImp newBroom = new BroomImp(type, newName, newSpeed, newRange, newPrice);
 			sweep.add(newBroom);
+			System.out.println("Your new Broom: " + newName + " is added to the Sweep!");
 		}
-	
+	public void	evanescoABroomFromTheSweep(Scanner sc) {
+		System.out.println("Please choose the broom you would like to Evanesco from the Sweep: ");
+		int evanesco = 1;
+		for (int i = 0; i < sweep.size(); i++) {
+			System.out.println( evanesco + " " + sweep.get(i).getBroomName());
+		evanesco ++;
+		
+		}
+		int input = sc.nextInt();
+		sweep.remove(input - 1);
+	}
 }
 
 

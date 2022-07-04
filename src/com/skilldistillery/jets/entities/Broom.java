@@ -3,7 +3,7 @@ package com.skilldistillery.jets.entities;
 import java.util.Objects;
 
 public abstract class Broom {
-	private String broomType = "";
+	protected String broomType = "";
 	private String broomName = "";
 	private double broomSpeed = 0;
 	private int broomRange = 0;
@@ -76,13 +76,14 @@ public abstract class Broom {
 	}
 	@Override //generate toString, clean it up. 
 	public String toString() {
-		return " 		Broom Name: " + broomName + "\nBroom Speed: " + broomSpeed +
+		return " 	Broom Name: " + broomName + "\n\tBroom Type: " + broomType + "\nBroom Speed: " + broomSpeed +
 				" Broom Range: " + broomRange + " Broom Price: " + broomPrice + " galleons.";
 		
 	}
 	public void wingardiumLeviosa() { //case 2
 		System.out.println(toString());
-		System.out.println("	Up! Brooms max fly time is: " + getFlyTime() + " years.");
+		System.out.println("*~*~*Up! Brooms max fly time is: " + getFlyTime() + " years.*~*~*");
+		System.out.println(" ");
 	}
 	public String getBroomType() {
 		return broomType;
