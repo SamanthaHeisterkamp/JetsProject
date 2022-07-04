@@ -3,21 +3,25 @@ package com.skilldistillery.jets.entities;
 import java.util.Objects;
 
 public abstract class Broom {
+	private String broomType = "";
 	private String broomName = "";
 	private double broomSpeed = 0;
 	private int broomRange = 0;
 	private long broomPrice = 0;
+	private double flyTime = 0;
 	
 	
 	public Broom () {
 		super();
 	}
-	public Broom(String broomName, double broomSpeed, int broomRange, long broomPrice) {
+	public Broom(String broomType, String broomName, double broomSpeed, int broomRange, long broomPrice) {
 		super();
+		this.setBroomType(broomType);
 		this.broomName = broomName;
-		this.broomPrice = broomPrice;
+		this.broomSpeed = broomSpeed;
 		this.broomRange = broomRange;
 		this.broomPrice = broomPrice;
+		
 	} 
 //	generate getters and setters cmd/opt/s
 	public String getBroomName() {
@@ -29,7 +33,7 @@ public abstract class Broom {
 	public double getBroomSpeed() {
 		return broomSpeed;
 	}
-	public void setBroomSpeed(double broomSpeed) {
+	public void setBroomSpeed(double broomSpeed) { //case 3
 		this.broomSpeed = broomSpeed;
 	}
 	public int getBroomRange() {
@@ -43,6 +47,13 @@ public abstract class Broom {
 	}
 	public void setBroomPrice(long broomPrice) {
 		this.broomPrice = broomPrice;
+	}
+	public double getFlyTime() {
+		flyTime = broomRange / broomSpeed;
+		return flyTime;
+	}
+	public void setFlyTime(double flyTime) {
+		this.flyTime = flyTime;
 	}
 	
 	
@@ -65,8 +76,18 @@ public abstract class Broom {
 	}
 	@Override //generate toString, clean it up. 
 	public String toString() {
-		return " Broom Name: " + broomName + " Broom Speed: " + broomSpeed +
-				" Broom Range: " + broomRange + " Broom Price; " + broomPrice;
+		return " 		Broom Name: " + broomName + "\nBroom Speed: " + broomSpeed +
+				" Broom Range: " + broomRange + " Broom Price: " + broomPrice + " galleons.";
 		
+	}
+	public void wingardiumLeviosa() { //case 2
+		System.out.println(toString());
+		System.out.println("	Up! Brooms max fly time is: " + getFlyTime() + " years.");
+	}
+	public String getBroomType() {
+		return broomType;
+	}
+	public void setBroomType(String broomType) {
+		this.broomType = broomType;
 	}
 }

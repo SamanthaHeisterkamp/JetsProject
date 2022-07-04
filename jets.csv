@@ -1,5 +1,5 @@
-Shooting Star,30,2,18
-Firebolt,150,5,1037
-CleanSweep Eleven,70,3,82
-Nimbus 2000,100,6,479
-Comet,60,1,103
+Airliner,Shooting Star,30,60,18
+Fighter,Firebolt,150,750,1037
+Cargo,CleanSweepEleven,70,210,82
+Surveillance,Nimbus 2000,100,600,479
+Tanker,Comet,60,60,103

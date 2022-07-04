@@ -4,44 +4,134 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class BroomCloset {
-	ArrayList<Broom> sweep = new ArrayList<Broom>();
-
-	String jets = "jets.csv";
-//	private List<Broom> sweep; //creating the empty list of brooms
-
-	public BroomCloset(String jets) {
-		super();
-		this.jets = jets;
-	}
+	public List<Broom> sweep = new ArrayList<>();
+	public Object setSweep = sweep;
+	Scanner sc = new Scanner(System.in);
 
 	public BroomCloset() {
-		super();
 	}
 
-	public BroomCloset(String jets, BroomCloset bC) {
-		super();
-		this.jets = jets;
-	}
-
-	public void readJets() {
-		try (BufferedReader bufIn = new BufferedReader(new FileReader("jets.csv"))) {
+	public void assembleSweep(String fileName) {
+		try (BufferedReader bufIn = new BufferedReader(new FileReader(fileName))) {
 			String line;
-			while ((line = bufIn.readLine()) != null) {
+			String type;
+			String name;
+			int speed;
+			int range;
+			int price;
 
-				System.out.println(line);
+			while ((line = bufIn.readLine()) != null) {
+				String[] broomInfo = line.split(",");
+				type = broomInfo[0];
+				name = broomInfo[1];
+				speed = Integer.parseInt(broomInfo[2]);
+				range = Integer.parseInt(broomInfo[3]);
+				price = Integer.parseInt(broomInfo[4]);
+
+				if (type.equals("Airliner")) {
+					sweep.add(new Airliner(type, name, speed, range, price));
+				} else if (type.equals("Fighter")) {
+					sweep.add(new Fighter(type, name, speed, range, price));
+				} else if (type.equals("Cargo")) {
+					sweep.add(new Cargo(type, name, speed, range, price));
+				} else if (type.equals("Surveillance")) {
+					sweep.add(new Surveillance(type, name, speed, range, price));
+				} else if (type.equals("Tanker")) {
+					sweep.add(new Tanker(type, name, speed, range, price));
+				}
+
 			}
+
 		} catch (IOException e) {
 			System.err.println(e);
 		}
 	}
 
-	public void listSweepOfBrooms() {
+	public void listSweepOfBrooms() { // case 1
 		for (Broom broom : sweep) {
 			System.out.println(broom.toString());
-
 		}
 	}
 
+	public void wingardiumLeviosa() { // case 2
+		for (Broom broom : sweep) {
+			broom.wingardiumLeviosa();
+			broom.toString();
+		}
+	}
+
+	public void accioFastestBroom() { // case 3
+		double fastestBroom = 0;
+		Broom accioFastestBroom = null;
+
+		for (Broom broom : sweep) {
+
+			if (fastestBroom < broom.getBroomSpeed()) {
+				fastestBroom = broom.getBroomSpeed();
+				accioFastestBroom = broom;
+			}
+		}
+		if (accioFastestBroom != null) {
+			System.out.println("The fastest Broom in the Sweep is: \n" + accioFastestBroom);
+		}
+	}
+
+	public void accioBroomWithLongestRange() { // case 4
+		double longestRange = 0;
+		Broom longRange = null;
+
+		for (Broom broom : sweep) {
+			if (longestRange < broom.getBroomRange()) {
+				longestRange = broom.getBroomRange();
+				longRange = broom;
+			}
+		}
+		if (longRange != null) {
+			System.out.println("The broom with the longest range is: \n" + longRange);
+		}
+	}
+
+	public void locomotor() { // case 5
+		for (Broom broom : sweep) {
+			if (broom instanceof Cargo) {
+				((Cargo) broom).loadCargo();
+			}
+		}
+
+	}
+
+	public void quidditch() { //case 6
+		for (Broom broom : sweep) {
+			if (broom instanceof Fighter) {
+				((Fighter)broom).quidditch();
+			}
+		}
+			
+		}
+		public void geminioABroomToTheSweep(Scanner sc) {
+			String Tanker = null;
+			String newName;
+			double newSpeed;
+			int newRange;
+			long newPrice;
+			
+			System.out.println("Add your broom to the closet: ");
+			newName = sc.next();
+			System.out.println("How fast can your broom fly?");
+			newSpeed = sc.nextDouble();
+			System.out.println("What is the range in miles your broom can fly?");
+			newRange = sc.nextInt();
+			System.out.println("How many galleons does your broom cost?");
+			newPrice = sc.nextLong();
+			
+			Tanker newBroom = new Tanker(Tanker, newName, newSpeed, newRange, newPrice);
+			sweep.add(newBroom);
+		}
+	
 }
+
+
