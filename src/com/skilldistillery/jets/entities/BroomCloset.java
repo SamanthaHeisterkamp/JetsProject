@@ -53,6 +53,7 @@ public class BroomCloset {
 
 	public void listSweepOfBrooms() { // case 1
 		for (Broom broom : sweep) {
+		
 			System.out.println(broom.toString());
 			System.out.println("----------------------------------------------------------------");
 		}
@@ -135,7 +136,7 @@ public class BroomCloset {
 			sweep.add(newBroom);
 			System.out.println("Your new Broom: " + newName + " is added to the Sweep!");
 		}
-	public void	evanescoABroomFromTheSweep(Scanner sc) {
+	public void	evanescoABroomFromTheSweep(Scanner sc) { //case 8
 		System.out.println("Please choose the broom you would like to Evanesco from the Sweep: ");
 		int evanesco = 1;
 		for (int i = 0; i < sweep.size(); i++) {

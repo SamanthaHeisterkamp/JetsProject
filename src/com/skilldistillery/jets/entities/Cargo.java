@@ -14,6 +14,11 @@ public class Cargo extends Broom implements CargoCarrier{
 		 System.out.println(toString());
 	 System.out.println(" ");
 	 System.out.println("**~*~*~*Loading school Trunk.*~*~*~**");
+	 System.out.println("        _______________");
+	 System.out.println("       /               \\");
+	 System.out.println("      |________0________|");
+	 System.out.println("      |                 |");
+	 System.out.println("      |_________________|");
 	 System.out.println("*~Trunk secure, flying to Hogwarts!~*");
 	 System.out.println(" ");
  }

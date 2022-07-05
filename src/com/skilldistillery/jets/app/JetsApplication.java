@@ -31,21 +31,31 @@ public class JetsApplication {
 			int wandMovement = 0;
 			wandMovement = sc.nextInt();
 
-			if (wandMovement < 10) {
+			if (wandMovement < 2500) {
 				switch (wandMovement) {
 				case 1:
+					System.out.println("*~*~*~*~*~*~*~*~*~*~*ACCIO Sweep Of Brooms*~*~*~*~*~*~*~*~*~*~*");
+					System.out.println(" ");
 					broomCloset.listSweepOfBrooms();
 					break;
 				case 2:
+					System.out.println("*~*~*~*~*~*~*~*~*~*~*Wingardium Leviosa!*~*~*~*~*~*~*~*~*~*~*");
+					System.out.println(" ");
 					broomCloset.wingardiumLeviosa();
 					break;
 				case 3:
+					System.out.println("**~*~*~*~*~*~*~*~*~*~*ACCIO Fastest Broom!*~*~*~*~*~*~*~*~*~*~**");
+					System.out.println(" ");
 					broomCloset.accioFastestBroom();
 					break;
 				case 4:
+					System.out.println("**~*~*~*~*~*~*~*~*~*~*ACCIO Longest Range Broom!*~*~*~*~*~*~*~**");
+					System.out.println(" ");
 					broomCloset.accioBroomWithLongestRange();
 					break;
 				case 5:
+					System.out.println("**~*~*~*~*~*~*~*~*~*~*LOCOMOTOR CARGO BROOM!*~*~*~*~*~*~*~*~*~**");
+					System.out.println(" ");
 					broomCloset.locomotor();
 					break;
 
@@ -53,24 +63,43 @@ public class JetsApplication {
 					broomCloset.quidditch();
 					break;
 				case 7:
+					System.out.println("**~*~*~*~*~*~*~*~*~*~*~*GEMINIO!~*~*~*~*~*~*~*~*~*~*~**");
+					System.out.println(" ");
 					broomCloset.geminioABroomToTheSweep(sc);
 					break;
 				case 8:
+					System.out.println("**~*~*~*~*~*~*~*~*~*~*~*EVANESCO!*~*~*~*~*~*~*~*~*~*~**");
+					System.out.println(" ");
 					broomCloset.evanescoABroomFromTheSweep(sc);
+					System.out.println(" ");
+					System.out.println("Your broom has been Evanesco'd!");
+					System.out.println(" ");
 					break;
 				case 9:
-					System.out.println("Mischief Managed.");
+					System.out.println("   *            *");
+					System.out.println("     *        *   *               *");
+					System.out.println("   * _______________________        *");
+					System.out.println("  *  |*~*~*~*~*~*~*~*~*~*~*|      *");
+					System.out.println("*    |* Mischief Managed. *|    *");
+					System.out.println("*    |*~*~*~*~*~*~*~*~*~*~*|      *");
+					System.out.println("  *  -----------------------    *");
+					System.out.println(" *   *                  *    *");
+					System.out.println("  * *                     *");
 					loop = false;
 					break;
 				default:
-					System.out.println("Messrs Moony, Wormtail, Padfoot, and Prongs");
-					System.out.println("...offer their compliments to Professor Snape,");
-					System.out.println("and request he keep his abnormally large nose");
-					System.out.println("...out of other people's business.");
+					System.out.println("________________________________________________");
+					System.out.println("|Messrs Moony, Wormtail, Padfoot, and Prongs   |");
+					System.out.println("|...offer their compliments to Professor Snape,|");
+					System.out.println("|and request he keep his abnormally large nose |");
+					System.out.println("|...out of other people's business.            |");
+					System.out.println("------------------------------------------------");
 					System.out.println(" ");
 					break;
 				}
 			}
+			
 		}
+		sc.close();
 	}
 }

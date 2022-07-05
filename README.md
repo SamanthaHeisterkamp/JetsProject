@@ -1,1 +1,12 @@
 # JetsProject 
+I created a sweep of brooms with different capabilities. I decided on doing brooms because, well, I love the Wizarding World. Choosing something that I enjoy helped me get through this project. I enjoy adding little quips and print outs that make the program entertaining and look nice. The application is run through a menu where the user can access information about the sweep, individual brooms, interact with them by having the brooms fly, flight, or load up. User can also add and remove their own brooms from the sweep. 
+#Description
+When the user starts the program they are prompted with "I solemly swear that I am up to no good." And then the Maurauder's Map menu shows up and asks you to choose your wand choice. Each menu choice is labeled with a spell that invokes the users input. Choice 1, is the collection (also known as a Sweep) of brooms currently in your broom closet. Choice 2, makes all the brooms fly. Choice 3, summons the fastest broom in your sweep. Choice 4, summons the broom with the longest range in your sweep. Choice 5, loads up your cargo broom with your school trunk and off you go to Hogwarts. Choice 6, invokes a Quidditch match. I chose the very first Quidditch match in the series and added some print outs from that scene. Choice 7, this spell lets the user add a new broom to the sweep and choice 8 will remove a broom of the users choice. After adding or removing brooms, you are able to get a list of the current brooms that you have, along with updating fastest, and longest range. Choice 9, this spell quits and the program and you are prompted with "Mischief Managed" as you are now done with the Maurauder's Map.  
+#Technologies Used
+* Java 1.8  
+* Eclipse  
+* Git/GitHub  
+* Terminal
+
+#What I learned
+I still feel like the way I am working my way through the project is messy. I get on a track that I know what I am doing and I'll just stick to that instead of following user stories. So I do feel frazzled when I am writing code as I am typically a very organized person. I think this big of a project was a lot to take on but it helped by implementing a lot of the things we are learning, so while I can't explain everything in detail, I have a really good reference project to help drill all of these new items in. Overall, writing it was stressful, but once I had most of it written and felt good about it, I enjoyed going back through and customizing everything. 

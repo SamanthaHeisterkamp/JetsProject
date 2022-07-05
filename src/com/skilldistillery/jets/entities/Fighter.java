@@ -11,6 +11,17 @@ public class Fighter extends Broom {
  }
 
 public void quidditch() {
+	System.out.println("	                OOO");
+	System.out.println("	  o            O   O");
+	System.out.println("	>-#-          O     O");
+	System.out.println("	    OOO        O   O        OOO");
+	System.out.println("	   O   O        OOO        O   O");
+	System.out.println("	  O     O        l        O     O");
+	System.out.println("	   O   O         l         O   O      o");
+	System.out.println("	    OOO          l          OOO      -#-<");
+	System.out.println("	     l           l           l");
+	System.out.println("	     l           l           l");
+	System.out.println("	     l           l           l");
 	System.out.println("Welcome to Hogwarts first Quidditch game of the season!");
 	System.out.println("Today's game is Slytherin versus Gryffindor!");
 	System.out.println(" ");
